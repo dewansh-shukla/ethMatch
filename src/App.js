@@ -2,7 +2,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Container } from '@mui/material'
 import Home from './screens/Home/Home'
-import Bg from './assets/images/merge.webp'
+import Bg from './assets/images/oldship.webp'
 import Navbar from './components/Navbar/Navbar'
 import { makeStyles } from '@mui/styles'
 import './App.css'
@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     backgroundColor: 'black',
     backgroundImage: `url(${Bg})`,
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'contain',
+    backgroundSize: '60vw ',
     backgroundPosition: 'right',
     opacity: 1,
   },

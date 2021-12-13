@@ -28,7 +28,7 @@ const useStyles = makeStyles({
     color: 'white !important',
     fontSize: '15px !important',
     fontFamily: 'Valo !important',
-    borderBottom: '2px solid red !important',
+    borderBottom: '2px solid #ff4655 !important',
   },
   metz: {
     width: '50px',
@@ -44,7 +44,7 @@ const useStyles = makeStyles({
     borderRadius: '12px !important',
     padding: '8px 16px',
     fontFamily: 'Valo !important',
-    border: '2px solid red !important',
+    border: '2px solid #ff4655 !important',
     '&:hover': {
       border: '2px solid blue !important',
     },
