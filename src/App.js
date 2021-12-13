@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
-
+import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Container } from '@mui/material'
+import Home from './screens/Home/Home'
+import Bg from './assets/images/merge.webp'
+import Navbar from './components/Navbar/Navbar'
+import { makeStyles } from '@mui/styles'
+import './App.css'
+const useStyles = makeStyles({
+  main: {
+    padding: 0,
+    margin: 0,
+    minWidth: '100%',
+    minHeight: `100vh`,
+    backgroundColor: 'black',
+    backgroundImage: `url(${Bg})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'contain',
+    backgroundPosition: 'right',
+    opacity: 1,
+  },
+})
 function App() {
+  const classes = useStyles()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Router>
+        <Navbar />
+        <Container maxWidth='xl' className={classes.main}>
+          <Routes>
+            <Route exact path='/' element={<Home />} />
+          </Routes>
+        </Container>
+      </Router>
+    </>
+  )
 }
 
-export default App;
+export default App
